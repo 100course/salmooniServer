@@ -7,8 +7,13 @@ const SalmooniUsersSchema = new mongoose.Schema({
     picture : {
         type: String,
     },
+    mobile: {
+        type: String,
+        required: true
+    },
     type: {
-        type:
+        type: String,
+        required: true
     },
     times : [
         {
@@ -21,4 +26,4 @@ const SalmooniUsersSchema = new mongoose.Schema({
 });
 
 
-module.exports = salmooni = mongoose.model('salmooni', SalmooniSchema);
+module.exports = SalmooniUsers = mongoose.model('SalmooniUsers', SalmooniUsersSchema);
